@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <title>LaVuelta2026: Juegos</title>
+
+    <meta name="author" content="Iván Herrero Sánchez" />
+    <meta name="description" content="Documento juegos del proyecto LaVuelta2026" />
+   
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+
+    <!--Enlace a las hojas de estilo-->
+    <link rel="icon" type="image/png" sizes="32x32" href="multimedia/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+</head>
+
+<body>
+   <header>
+    <h1><a href="index.html">LaVuelta2026</a></h1>
+    <nav>
+        <a href="index.html" title="Inicio">Inicio</a>
+        <a href="ciclista.html" title="Información del ciclista">Ciclista</a>
+        <a href="equipo.html" title="Información del equipo">Equipo</a>
+        <a href="etapa.html" title="Información de la etapa">Etapa</a>
+        <a href="meteorologia.html" title="Información sobre la meteorologia">Meteorología</a>
+        <a href="clasificaciones.html" title="Información sobre las clasificaciones">Clasificaciones</a>
+        <a href="juegos.html" title="Juego de preguntas" aria-current="page">Juegos</a>
+        <a href="ayuda.html" title="Ayuda sobre la página">Ayuda</a>
+    </nav>
+   </header>
+   <nav aria-label="migas">
+    <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li>|</li>
+        <li>Juegos</li>
+    </ol>
+    </nav>
+   <main>
+   <h2>Juego</h2>
+   <h3>¿Conoces la etapa?</h3>
+   <p>Este juego consistirá en responder a una serie de 10 preguntas relacionadas con la etapa</p>
+   <form>
+        <fieldset>
+            <legend>Datos de la Etapa de La Vuelta</legend>
+            <p>
+                <label for="numero-etapa">Número de la erapa:</label>
+                <input type="number" id="numero-etapa" min="1" max="21">
+            </p>
+            <p>
+                <label for="fecha-etapa">Fecha de la etapa:</label>
+                <input type="date" id="fecha-etapa">
+            </p>
+
+            <p>
+                <label for="ciudad-salida">Lugar de salida</label>
+                <select id="ciudad-salida">
+                    <option value="">Seleccione una opción</option>
+                    <option value="jaen">Jaén</option>
+                    <option value="monaco">Monaco</option>
+                    <option value="gruissan-aude">Gruissan - Aude</option>
+                </select>
+            </p>
+            <p>
+                <label for="ciudad-llegada">Lugar de llegada</label>
+                <select id="ciudad-llegada">
+                    <option value="">Seleccione una opción</option>
+                    <option value="castello">Castelló</option>
+                    <option value="font-romeu">Font Romeu</option>
+                    <option value="lorca">Lorca</option>
+                </select>
+            </p>
+            <p>Indica el tipo de etapa:</p>
+            <p>
+                <input type="radio" id="tipo-llana">
+                <label for="tipo-llana">Llana</label><br>
+                
+                <input type="radio" id="tipo-media-montana">
+                <label for="tipo-media-montana">Media montaña</label><br>
+                
+                <input type="radio" id="tipo-montana">
+                <label for="tipo-montana">Montaña</label><br>
+                
+                <input type="radio" id="tipo-cri">
+                <label for="tipo-cri">Contrarreloj individual</label><br>
+                
+                <input type="radio" id="tipo-o">
+                <label for="tipo-o">Ondulada</label>
+            </p>
+            <p>Indica los hitos presentes en la etapa:</p>
+            <p>
+                <input type="checkbox" id="hito-puerto">
+                <label for="hito-puerto">Puerto de montaña</label><br>
+                
+                <input type="checkbox" id="hito-especial">
+                <label for="hito-especial">Puerto categoría especial</label><br>
+                
+                <input type="checkbox" id="hito-sprint-int">
+                <label for="hito-sprint-int">Sprint intermedio</label><br>
+                
+                <input type="checkbox" id="hito-sprint-bon">
+                <label for="hito-sprint-bon">Sprint bonificado</label><br>
+                
+                <input type="checkbox" id="hito-ninguno">
+                <label for="hito-ninguno">Sin hitos</label>
+            </p>
+            <p>
+                <label for="dureza-etapa">Dureza de la etapa (1 al 10):</label>
+                <input type="range" id="dureza-etapa" min="1" max="10">
+            </p>
+            <p>
+                <label for="longitud-etapa">Longitud de la etapa (km):</label>
+                <input type="number" id="longitud-etapa" min="0" step="0.1">
+            </p>
+            <p>
+                <label for="desnivel-etapa">Desnivel acumulado (metros):</label>
+                <input type="number" id="desnivel-etapa" min="0">
+            </p>
+            <p>
+                <label for="descripcion-etapa">Descripción breve de la etapa:</label><br>
+                <textarea id="descripcion-etapa" rows="5" cols="50"></textarea>
+            </p>
+            <p>
+                <label for="nombre-estudiante">Nombre del participante:</label>
+                <input type="text" id="nombre-estudiante">
+            </p>
+        </fieldset>
+        <p>
+            <button type="submit">Enviar respuestas</button>
+        </p>
+   </form>
+   </main>
+   <footer>
+    <p>Iván Herrero Sánchez</p>
+    <address>
+        <a href="mailto:UO297383@uniovi.es">UO297383@uniovi.es</a>
+    </address>
+   </footer>
+</body>
+</html>

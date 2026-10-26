@@ -1,0 +1,136 @@
+/* ***************************************/
+/*           LaVuelta2026                */
+/*          Estilos layout               */
+/* ***************************************/
+/*    DATOS ESTUDIANTE                   */
+/* --------------------------------------*/
+/*  Nombre y Apellidos:                  */
+/*  Correo electrónico (uniovi):         */
+/*  Grupo de laboratorio:                */
+/* ***************************************/
+
+/*Especificidad: 011*/
+section:has(picture) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/*Especificidad: 012*/
+section:has(picture) > h3 {
+  flex-basis: 100%;
+  order: 1;
+}
+
+/*Especificidad: 012*/
+section:has(picture) > picture {
+  order: 2;
+}
+
+/*Especificidad: 012*/
+section:has(picture) > ul {
+  order: 3;
+  list-style: none; 
+}
+
+/*Especificidad: 011*/
+section:has(video) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+/*Especificidad: 011*/
+section:has(article + article) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 1em;
+}
+
+/*Especificidad: 012*/
+section:has(article + article) > h3 {
+  grid-column: 1 / -1;
+}
+
+/*Especificidad: 001*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Especificidad: 001*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+/*Especificidad: 001*/
+table {
+  border-collapse: collapse; 
+  width: 100%;
+  max-width: 30em;
+  margin: 1em 0;
+}
+
+/*Especificidad: 002*/
+th, td {
+  padding: 0.5em 0.75em;
+}
+
+@media screen and (max-width: 1024px) {
+
+  /*Especificidad: 011*/
+  section:has(article + article) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*Especificidad: 001*/
+  header {
+    flex-direction: column;
+  }
+
+  /*Especificidad: 002*/
+  header > nav {
+    width: 100%;
+  }
+
+  /*Especificidad: 003*/
+  header > nav > ul {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+  }
+
+  /*Especificidad: 011*/
+  nav[aria-label="migas"] {
+    display: none;
+  }
+
+  /*Especificidad: 001*/
+  video,
+  audio {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  /* Cuadrícula de corredores: pasa a 1 sola columna */
+  /*Especificidad: 011*/
+  section:has(article + article) {
+    grid-template-columns: 1fr;
+  }
+
+  /* Opciones del menú de navegación colocadas en columna */
+  /*Especificidad: 003*/
+  header > nav > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}

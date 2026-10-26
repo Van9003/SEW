@@ -1,0 +1,135 @@
+/* *************************************************/
+/*             LaVuelta2026                        */
+/*          Estilos generales                      */
+/* *************************************************/
+/*    DATOS ESTUDIANTE                             */
+/* ------------------------------------------------*/
+/*  Nombre y Apellidos: Iván Herrero Sánchez       */
+/*  Correo electrónico (uniovi):uo297383@uniovi.es */
+/*  Grupo de laboratorio: L9                       */
+/* *************************************************/
+
+/* Gama cromática
+ 
+Color principal (#7A0B4F, magenta oscuro)
+   o Contraste de 10.56:1 con color blanco (AAA texto normal y grande)
+   o Contraste de 8.33:1 con color secundario (AAA texto normal y grande)
+ 
+Color secundario (#FFE600, amarillo neón)
+   o Contraste de 16.57:1 con color negro (AAA texto normal y grande)
+   o Contraste de 8.33:1 con color principal (AAA texto normal y grande)
+ 
+Color negro (#000000)
+   o Contraste de 21.00:1 con color blanco (AAA texto normal y grande)
+   o Contraste de 16.57:1 con color secundario (AAA texto normal y grande)
+ 
+Color blanco (#FFFFFF)
+   o Contraste de 21.00:1 con color negro (AAA texto normal y grande)
+   o Contraste de 10.56:1 con color principal (AAA texto normal y grande)
+*/
+ 
+/* Especifidad: 010 */
+:root {
+    --color-principal: #7A0B4F;
+    --color-secundario: #FFE600;
+    --color-negro: #000000;
+    --color-blanco: #ffffff;
+}
+
+/* Especifidad: 001*/
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+/* Especifidad: 001 */
+header, footer {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+ 
+/* Enlaces en amarillo neón sobre magenta (8.33:1, AAA) */
+/* Especifidad: 002 */
+header a, footer a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+ 
+/* Especifidad: 001 */
+h2, h3, h4, h5, h6 {
+    color: var(--color-principal);
+}
+ 
+/* Especificidad: 012 */
+header a[aria-current="page"]{
+    font-weight: bolder;
+    color: var(--color-blanco);
+}
+
+/* Especificidad: 003 */
+header + nav > ol{
+    font-size: 0.85em;
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5em 0;
+}
+
+/* Especificidad: 004 */
+header + nav > ol > li {
+    display: inline;
+}
+
+/* Especificidad: 014 */
+header + nav > ol > li:last-child{
+    font-weight: bold;
+}
+
+/*Especificidad: 023*/
+section:has(picture) > ul > li:first-child {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/*Especificidad: 023*/
+section:has(picture) > ul > li:nth-child(3) {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+/*Especificidad: 023*/
+section:has(picture) > ul > li:last-child {
+  font-weight: bold;
+}
+
+/* Tabla */
+
+/*Especificidad: 001*/
+caption {
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+/*Especificidad: 002*/
+th, td {
+  border-bottom: 1px solid #ccc;
+}
+
+/*Especificidad: 002*/
+thead th {
+  border-bottom: 2px solid #333;
+  text-align: left;
+}
+
+/*Especificidad: 002*/
+tbody td {
+  text-align: right;
+}
+
+/*Especificidad: 002*/
+tbody th {
+  text-align: left;
+  font-weight: normal;
+}
